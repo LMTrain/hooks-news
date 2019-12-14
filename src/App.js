@@ -22,9 +22,12 @@ export default function App() {
     try {
 
       const response = await axios.get(
-        `http://hn.algolia.com/api/v1/search?query=${query}`
+        // `http://hn.algolia.com/api/v1/search?query=${query}`
+        `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=40&orderBy=newest&key=AIzaSyD5c7Uuj4hd7FPRO9A9o4zhWaCTsffKrNc`
       );
-      setResults(response.data.hits);
+      console.log(response)
+      // setResults(response.data.hits);
+      setResults(response.data.items);
     } catch (err) {
       setErroor(err)
 
@@ -64,8 +67,11 @@ export default function App() {
       ) : (
       <ul className="list-reset leading-normal">
         {results.map(result => (
-          <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
-            <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
+          // <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
+          //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
+          // </li>
+          <li key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
+            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-indigo-darkest">{result.volumeInfo.title}</a>
           </li>
         ))}
       </ul>
