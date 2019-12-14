@@ -44,31 +44,36 @@ export default function App() {
   }
 
   return (
-    <>
-      <form onSubmit={handleSearch}>
+    <div className="container max-w-md mx-auto p-4 m-2 bg-purple-light shadow-xlg rounded">
+      <img src="https://lmtrain.github.io/lm-images/assets/images/ls_wf3.jpg" alt="Logo" className="float-right h-12" />
+      <h1 className="text-white font-thin text-center">Hooks News</h1>
+
+      <form onSubmit={handleSearch} className="mb-2">
       <input 
         type="text" 
         onChange={event => setQuery(event.target.value)}
         value={query}
         ref={searchInputRef}
+        className="border p-1 rounded"
         />
-        <button type="submit">Search</button>
-        <button type="button" onClick={handleClearSearch}>Clear</button>
+        <button type="submit" className="bg-orange rounded m-1 p-1">Search</button>
+        <button type="button" onClick={handleClearSearch} className="bg-teal text-white p-1 rounded">Clear</button>
       </form>
       {loading ? (
-        <div>Loading results...</div>
+        <div className="font-bold text-black-dark">Loading results...</div>
       ) : (
-      <ul>
+      <ul className="list-reset leading-normal">
         {results.map(result => (
-          <li key={result.objectID}>
-            <a href={result.url}>{result.title}</a>
+          <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
+            <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
           </li>
         ))}
       </ul>
       )}
 
-      {error && <div>{error.message}</div>}
-    </>
+      {error && <div className="text-red font-bold">{error.message}
+      </div>}
+    </div>
   );
   
 }
