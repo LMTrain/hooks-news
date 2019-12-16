@@ -47,9 +47,9 @@ export default function App() {
   }
 
   return (
-    <div className="container max-w-md mx-auto p-4 m-2 bg-purple-light shadow-xlg rounded">
+    <div className="container max-w-md mx-auto p-4 m-2 bg-blue-lightest shadow-xlg rounded border">
       <img src="https://lmtrain.github.io/lm-images/assets/images/ls_wf3.jpg" alt="Logo" className="float-right h-12" />
-      <h1 className="text-white font-thin text-center">Hooks News</h1>
+      <h1 className="text-blue font-thin text-center">Hooks News</h1>
 
       <form onSubmit={handleSearch} className="mb-2">
       <input 
@@ -59,8 +59,8 @@ export default function App() {
         ref={searchInputRef}
         className="border p-1 rounded"
         />
-        <button type="submit" className="bg-orange rounded m-1 p-1">Search</button>
-        <button type="button" onClick={handleClearSearch} className="bg-teal text-white p-1 rounded">Clear</button>
+        <button type="submit" className="bg-orange shadow-lg rounded m-1 p-1">Search</button>
+        <button type="button" onClick={handleClearSearch} className="bg-teal text-white p-1 shadow-lg rounded">Clear</button>
       </form>
       {loading ? (
         <div className="font-bold text-black-dark">Loading results...</div>
@@ -71,7 +71,7 @@ export default function App() {
           //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
           // </li>
           <li key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
-            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-indigo-darkest">{result.volumeInfo.title}</a>
+            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue">{result.volumeInfo.title}</a>
           </li>
         ))}
       </ul>
