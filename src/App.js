@@ -71,7 +71,7 @@ export default function App() {
           //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
           // </li>
           <li key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
-            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue">{result.volumeInfo.title}</a>
+            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title}</a>
           </li>
         ))}
       </ul>
