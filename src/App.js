@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <div className="container max-w-md mx-auto p-4 m-2 bg-blue-lightest shadow-xlg rounded border">
-      <img src="https://lmtrain.github.io/lm-images/assets/images/ls_field-cnn.jpg" alt="Logo" className="float-right h-12" />
+      <img src="https://lmtrain.github.io/lm-images/assets/images/mydejavuredcar2.jpg" alt="Logo" className="float-right h-12" />
       <h1 className="text-blue font-thin text-center">Hooks News</h1>
 
       <form onSubmit={handleSearch} className="mb-2">
