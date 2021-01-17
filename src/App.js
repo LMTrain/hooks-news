@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
+import { Card} from 'reactstrap';
 
 export default function App() {
   const [results, setResults] = useState([]);
@@ -70,9 +71,18 @@ export default function App() {
           // <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
           //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
           // </li>
-          <li key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
-            <a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title}</a>
-          </li>
+          <Card key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
+            <a 
+              href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title} 
+                         
+            
+            <img
+                alt={result.volumeInfo.title} width="80" height="180" 
+                src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
+                />
+            </a>
+          </Card>
+          
         ))}
       </ul>
       )}
