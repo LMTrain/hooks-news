@@ -77,8 +77,10 @@ export default function App() {
                          
             
             <img
-                alt={result.volumeInfo.title} width="80" height="180" 
+                alt={result.volumeInfo.title} width="30" height="30" 
                 src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
+                className="float-right"
+                
                 />
             </a>
           </Card>
