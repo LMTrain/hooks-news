@@ -95,14 +95,14 @@ export default function App() {
                 </Card>
               </Col>
               
-            ))}
+              ))}
           {/* </ul> */}
           </div>
           )}
+        </Row>
 
           {error && <div className="text-red font-bold">{error.message}
           </div>}
-      </Row>
    
       
     </>
