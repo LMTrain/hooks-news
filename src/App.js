@@ -5,7 +5,7 @@ import { Card, CardHeader, CardBody, Row, Col} from 'reactstrap';
 
 export default function App() {
   const [results, setResults] = useState([]);
-  const [query, setQuery] = useState('react hooks');
+  const [query, setQuery] = useState('Bugatti');
   const [loading, setLoading] = useState(false);
   const [error, setErroor] = useState(null);
   const searchInputRef = useRef();
@@ -50,9 +50,9 @@ export default function App() {
 
   return (
     <>
-      <div className="container max-w-md mx-auto p-4 m-2 bg-blue-lightest shadow-xlg rounded border">
-        <img src="https://lmtrain.github.io/lm-images/assets/images/mydejavuredcar2.jpg" alt="Logo" className="float-right h-12" />
-        <h1 className="text-blue font-thin text-center">Hooks News</h1>
+      <div className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-xlg rounded border">
+        <img src="https://lmtrain.github.io/lm-images/assets/images/books7.jpg" alt="Logo" width="100" height="130" className="float-right" />
+        <h1 className="text-blue font-thin text-center">News-Books-Magazines</h1>
 
         <form onSubmit={handleSearch} className="mb-2">
         <input 
@@ -81,18 +81,18 @@ export default function App() {
               //<Card key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
               <Col key={result.etag} md="3">
                 <Card className="book-card">
-                <CardHeader className="book-card-header"><a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title}</a> </CardHeader>
+                  <CardHeader className="card-header"><b>{result.volumeInfo.title}</b> </CardHeader>
                               
                   <div className="img-container">
-                  <a href = {result.volumeInfo.infoLink} target="_blank">
+                    <a href = {result.volumeInfo.infoLink} target="_blank">
 
-                    <img
-                      
-                      alt={result.volumeInfo.title} width="130" height="230" 
-                      src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail}                        
+                      <img
                         
-                    />
-                  </a>
+                        alt={result.volumeInfo.title} width="130" height="230" 
+                        src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail}                        
+                          
+                      />
+                    </a>
                   </div>
                 
                 </Card>
