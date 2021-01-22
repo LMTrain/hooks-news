@@ -50,8 +50,6 @@ export default function App() {
 
   return (
     <Row>
-
-
         <div className="container max-w-md mx-auto p-4 m-2 bg-blue-lightest shadow-xlg rounded border">
           <img src="https://lmtrain.github.io/lm-images/assets/images/mydejavuredcar2.jpg" alt="Logo" className="float-right h-12" />
           <h1 className="text-blue font-thin text-center">Hooks News</h1>
@@ -71,28 +69,32 @@ export default function App() {
           {loading ? (
             <div className="font-bold text-black-dark">Loading results...</div>
           ) : (
-          <ul className="list-reset leading-normal">
+        <div className="book-row-display">
+          {/* <ul className="list-reset leading-normal"> */}
             {results.map(result => (
               // <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
               //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
               // </li>
               //<Card key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
-              <Card key={result.etag} className="book-card">
-                <a 
-                  href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title} 
-                            
-                
-                <img
-                    alt={result.volumeInfo.title} width="30" height="30" 
-                    src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
-                    className="float-right"
-                    
-                    />
-                </a>
-              </Card>
+              <Col key={result.etag} md="4">
+                <Card key={result.etag} className="book-card">
+                  <a 
+                    href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title} 
+                              
+                  
+                  <img
+                      alt={result.volumeInfo.title} width="130" height="230" 
+                      src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
+                      className="float-right"
+                      
+                      />
+                  </a>
+                </Card>
+              </Col>
               
             ))}
-          </ul>
+          {/* </ul> */}
+          </div>
           )}
 
           {error && <div className="text-red font-bold">{error.message}
