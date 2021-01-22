@@ -81,17 +81,21 @@ export default function App() {
               //<Card key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
               <Col key={result.etag} md="3">
                 <Card className="book-card">
-                  <a 
-                    href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title} 
+                <CardHeader className="book-card-header"><a href={result.volumeInfo.infoLink} className="text-indigo-dark hover:text-blue" target="_blank">{result.volumeInfo.title}</a> </CardHeader>
                               
-                  
-                  <img
-                      alt={result.volumeInfo.title} width="130" height="230" 
-                      src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
-                      className="float-right"
+                  <div className="img-container">
+                  <a href = {result.volumeInfo.infoLink} target="_blank">
+
+                    <img
                       
-                      />
+                        alt={result.volumeInfo.title} width="130" height="230" 
+                        src={result.volumeInfo.imageLinks == null ? 'https://lmtrain.github.io/lm-images/assets/images/books5.jpg' : result.volumeInfo.imageLinks.thumbnail} 
+                        className="float-right"
+                        
+                        />
                   </a>
+                  </div>
+                
                 </Card>
               </Col>
               

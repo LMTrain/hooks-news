@@ -72,6 +72,7 @@ ul.search-results img {
   color: white;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
   margin-bottom: 20px;
+  margin-left: 20px;
   width: 240px;
   height: 250px;
 }
