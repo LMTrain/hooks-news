@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios';
 import "./style.css";
-import { Card, CardHeader, CardBody, Row, Col} from 'reactstrap';
+import { Card, CardHeader, Row, Col} from 'reactstrap';
 
 export default function App() {
   const [results, setResults] = useState([]);
@@ -84,7 +84,7 @@ export default function App() {
                   <CardHeader className="card-header"><b>{result.volumeInfo.title}</b> </CardHeader>
                               
                   <div className="img-container">
-                    <a href = {result.volumeInfo.infoLink} target="_blank">
+                    <a href = {result.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">
 
                       <img
                         
