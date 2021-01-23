@@ -78,7 +78,7 @@ export default function App() {
               // <li key={result.objectID} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
               //   <a href={result.url} className="text-indigo-dark hover:text-indigo-darkest">{result.title}</a>
               // </li>
-              //<Card key={result.etag} className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-lg rounded">
+              
               <Col key={result.etag} md="3">
                 <Card className="book-card">
                   <CardHeader className="card-header"><b>{result.volumeInfo.title}</b> </CardHeader>
