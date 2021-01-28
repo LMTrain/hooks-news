@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./style.css";
 import { Card, CardHeader, Row, Col} from 'reactstrap';
 
+//Declare export function
 export default function App() {
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState('Bugatti');
