@@ -72,7 +72,7 @@ export default function App() {
           {loading ? (
             <div className="font-bold text-black-dark">Loading results...</div>
           ) : (
-   
+   // Display a Row
         <div className="book-row-display">
           {/* <ul className="list-reset leading-normal"> */}
             {results.map(result => (
