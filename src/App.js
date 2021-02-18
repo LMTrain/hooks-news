@@ -23,7 +23,7 @@ export default function App() {
     setLoading(true);
 
     try {
-
+//Declared response
       const response = await axios.get(
         // `http://hn.algolia.com/api/v1/search?query=${query}`
         `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=40&orderBy=newest&key=AIzaSyD5c7Uuj4hd7FPRO9A9o4zhWaCTsffKrNc`
