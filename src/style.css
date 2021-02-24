@@ -68,8 +68,8 @@ ul.search-results img {
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
   margin-bottom: 20px;
   margin-left: 20px;
-  width: 140px;
-  height: 280px;
+  width: 240px;
+  height: 480px;
 }
 .book-card:hover {
     cursor: pointer;
