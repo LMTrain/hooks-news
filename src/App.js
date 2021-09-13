@@ -53,7 +53,7 @@ export default function App() {
     <>
       <div className="container max-w-md mx-auto p-4 m-2 bg-purple-lightest shadow-xlg rounded border">
         <img src="https://lmtrain.github.io/lm-images/assets/images/bugatti_3.jpg" alt="Logo" width="100" height="130" className="float-right" />
-        <h1 className="text-blue font-thin text-center">News-Books-Magazines</h1>
+        <h1 className="text-blue font-thin text-center">LM News-Books-Magazines</h1>
 
         <form onSubmit={handleSearch} className="mb-2">
         <input 
