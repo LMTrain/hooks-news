@@ -29,11 +29,16 @@ ul.search-results img {
 }
 
 .img-container { 
-  height: 70%;
+  height: 90%;
   overflow: hidden;
   text-align: center;  
   border-radius: .95rem;
   padding-top: 1rem;
+  font-size: 12px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  color: #080808;
 }
 .card > .img-container > img {
   width: 50%;
